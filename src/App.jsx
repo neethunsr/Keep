@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Notes from './Notes';
 
 function App(){
     return <div>
-        <h1>Hello</h1>
+        <Header />
+        <Notes />
+        <Footer />
     </div>
 }
 export default App;
