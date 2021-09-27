@@ -4,20 +4,18 @@ import Footer from './Footer';
 import Notes from './Notes';
 import notes from './notes';
 
-console.log(notes);
-function createNotes(note){
-    return <Notes 
-        key={note.key}
-        title={note.title}
-        content={note.content}
-    />
-}
-
-
 function App(){
     return <div>
         <Header />
-        {notes.map(createNotes)};
+
+        {notes.map(note =>
+            <Notes 
+                key={note.key}
+                title={note.title}
+                content={note.content}
+            />
+        )};
+        
         <Footer />
     </div>
 }
