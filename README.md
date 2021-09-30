@@ -1,2 +1,4 @@
-# Keep
-Inspired from Google Keep app.
+# NotIt
+A notes application inspired from Google Keep app.
+
+Work in progress :)
