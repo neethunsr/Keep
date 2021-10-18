@@ -9,6 +9,12 @@ function AddNote(props) {
         content: ""
     });
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    function expand(){
+        setIsExpanded(true);
+    }
+
     function handleChange(event){
         const{name, value} = event.target;
 
@@ -30,20 +36,22 @@ function AddNote(props) {
   return (
     <div>
       <form className="addNote">
+        {isExpanded && 
         <input 
             name="title" 
             value={note.title} 
             placeholder="Title"
-            onChange={handleChange} 
-        />
+            onChange={handleChange}
+        />}
         <textarea 
             name="content" 
             value={note.content} 
             placeholder="Write something..." 
-            rows="3" 
-            onChange={handleChange}
+            rows={isExpanded ? "3" : "1"} 
+            onChange={handleChange} 
+            onClick={expand}
         />
-        <Zoom in={true}>
+        <Zoom in={isExpanded}>
             <Fab onClick={submitNote}><AddIcon /></Fab>
         </Zoom>
       </form>
