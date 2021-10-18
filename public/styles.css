@@ -54,3 +54,51 @@ footer p {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
+.note button {
+	position: relative;
+	float: right;
+	color: #eb1008;
+	border: none;
+	background-color: white;
+	outline: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+form {
+	position: relative;
+	width: 480px;
+	background: #fff;
+	border-radius: 7px;
+	box-shadow: 0 2px 5px #ccc;
+	margin: 30px auto 20px auto;
+	padding: 15px;
+}
+
+form input,
+form textarea {
+	width: 100%;
+	border: none;
+	padding: 4px;
+	margin-bottom: 5px;
+	outline: none;
+	font-size: 1.1em;
+	font-family: inherit;
+	resize: none;
+}
+
+form button {
+	position: absolute;
+	right: 18px;
+	bottom: -18px;
+	border-radius: 50%;
+	border: none;
+	background-color: #2c365e;
+	color: #fff;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	outline: none;
+}
