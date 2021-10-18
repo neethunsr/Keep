@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import AddIcon from '@material-ui/icons/Add';
+import { Fab } from "@material-ui/core";
+import { Zoom } from "@material-ui/core";
 
 function AddNote(props) {
     const[note, setNote] = useState({
@@ -26,7 +29,7 @@ function AddNote(props) {
     }
   return (
     <div>
-      <form>
+      <form className="addNote">
         <input 
             name="title" 
             value={note.title} 
@@ -40,7 +43,9 @@ function AddNote(props) {
             rows="3" 
             onChange={handleChange}
         />
-        <button onClick={submitNote}>+</button>
+        <Zoom in={true}>
+            <Fab onClick={submitNote}><AddIcon /></Fab>
+        </Zoom>
       </form>
     </div>
   );
