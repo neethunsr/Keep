@@ -25,6 +25,7 @@ function AddNote(props) {
             };
         });
     }
+
     function submitNote(event){
         props.onAdd(note);
         setNote({
@@ -33,7 +34,8 @@ function AddNote(props) {
         })
         event.preventDefault();
     }
-  return (
+    
+    return (
     <div>
       <form className="addNote">
         {isExpanded && 
