@@ -1,4 +1,7 @@
 # NotIt
-A notes application inspired from Google Keep app.
+A notes application(frontend only) inspired from Google Keep app.
 
-Work in progress :)
+## Features
+
+- Add notes
+- Delete notes
